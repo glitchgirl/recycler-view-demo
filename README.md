@@ -19,6 +19,25 @@ We’ll build:
 * How ViewHolders work
 * How data connects to UI
 * Basic click handling
+---
+# Set up
+📱 In Android Studio:
+
+Click New Project
+
+Choose Empty Views Activity
+
+Click Next
+
+Configure:
+
+Name: RecyclerViewDemo
+
+Language: Kotlin
+
+Minimum SDK: API 24 (or whatever your class is using)
+
+Click Finish
 
 ---
 
