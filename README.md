@@ -47,7 +47,7 @@ In `app/build.gradle`:
 
 ```gradle
 dependencies {
-    implementation "androidx.recyclerview:recyclerview:1.3.2"
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }
 ```
 
@@ -56,7 +56,12 @@ dependencies {
 # Step 2: Add RecyclerView to Layout
 
 ### `activity_main.xml`
-
+app
+└── src
+    └── main
+        └── res
+            └── layout
+                └── activity_main.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.recyclerview.widget.RecyclerView
@@ -69,7 +74,7 @@ dependencies {
 ---
 
 # Step 3: Create a Data Class
-
+The same folder as the MainActivity.kt
 ### `Pet.kt`
 
 ```kotlin
@@ -82,7 +87,7 @@ data class Pet(
 ---
 
 # Step 4: Create Item Layout
-
+The same folder as activity_main.xml
 ### `item_pet.xml`
 
 ```xml
@@ -111,7 +116,14 @@ data class Pet(
 ---
 
 # Step 5: Create the Adapter
-
+app
+└── src
+    └── main
+        └── java
+            └── your.package.name
+                ├── MainActivity.kt
+                ├── Pet.kt       ← data class
+                └── PetAdapter.kt ← adapter
 ### `PetAdapter.kt`
 
 ```kotlin
@@ -216,13 +228,3 @@ Ask students:
 5. Convert to Compose LazyColumn version
 
 ---
-
-If you'd like, I can also give you:
-
-* A version with images
-* A grid layout demo
-* A “broken” version for debugging practice
-* A TDD-style RecyclerView walkthrough
-* A Compose version using LazyColumn
-
-Just tell me what vibe you want for your class 👩‍🏫📱
